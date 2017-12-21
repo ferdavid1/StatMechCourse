@@ -14,6 +14,7 @@ n_iter = 100000000
 for i in range(n_iter):
 	new_pos = neighbor[pos][random.randint(0,3)]
 	if random.random() < weight[new_pos] / weight[pos]:
+		# p_a->b = min(1, pr(b)/pr(a)) represented
 		pos = new_pos
 	histo[pos] += 1
 
