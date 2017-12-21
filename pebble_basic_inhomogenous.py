@@ -21,5 +21,5 @@ for i in range(n_iter):
 norm = sum(weight)
 print('comparison: weight, histogram')
 for k in range(9):
-	print('site: ' + k + 'weight: ' + str(weight[k]) + 'histo: ' + str(norm*histo[k] / float(n_iter)))
+	print('site: ' + str(k) + 'weight: ' + str(weight[k]) + 'histo: ' + str(norm*histo[k] / float(n_iter)))
 

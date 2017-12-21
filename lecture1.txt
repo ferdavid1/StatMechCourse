@@ -34,11 +34,12 @@ Detailed Balance
 		p_a->b = p_b->a
 		p_a->c = p_c->a
 
+Markov Chain sampling
+
 	each of the four moves (up, down, left, right)
 
 		have a probability 1/4 of happening
 
 	p_a->b = min(1, pr(b)/pr(a)) -- a being the initial state and b being the state it jumps to
 
-
-		pebble_basic.py
+		pebble_basic.py and related
