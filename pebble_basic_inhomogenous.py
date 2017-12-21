@@ -23,3 +23,15 @@ print('comparison: weight, histogram')
 for k in range(9):
 	print('site: ' + str(k) + 'weight: ' + str(weight[k]) + 'histo: ' + str(norm*histo[k] / float(n_iter)))
 
+'''
+comparison: weight, histogram
+site: 0 weight: 3   histo: 3.0023021
+site: 1 weight: 0.5 histo: 0.5001003
+site: 2 weight: 1   histo: 1.0005599
+site: 3 weight: 0.5 histo: 0.4996622
+site: 4 weight: 1   histo: 1.0001225
+site: 5 weight: 0.5 histo: 0.4995473
+site: 6 weight: 2   histo: 1.9978134
+site: 7 weight: 0.5 histo: 0.4999839
+site: 8 weight: 1   histo: 0.9999084
+
