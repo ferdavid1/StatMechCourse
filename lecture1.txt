@@ -1,0 +1,44 @@
+Direct Sampling
+
+	pi/4 = ratio of area of the circle / area of square made up of the edges of the circle
+
+	
+	Given said square with the circle inscribed in it, we throw a pebble somewhere randomly in the square/circle area. then, we go to where we threw it, and throw it randomly again. If we happen to have a throw land outside the square, we stack the pebble on top of the previous pebble and throw a new pebble - continuing to do this until we throw back in the circle. 
+
+	After many trials, we find that the edges of our circle will have the most piles of rocks, representing throws that landed outside the outer square. The single stones will fill the inner circle.  
+
+	the above is the metropolis algorithm
+
+Detailed Balance
+
+	Why is there a tendency for pebbles to have piles at the edge? 	
+
+	simplified version of the metropolis algo - 3x3 square, pebbles can only move one subsquare left, right, up, or down
+
+	if we have pebble states a,b,c,etc then the probability Pi for a to be at configuration a is given by the Pr(at a and remains at at) + Pr(b at config b)*Pr(move from b to a)
+
+		pi_a = pi_a->a + pi_b->a + pr_c->a
+
+			this can be reduced to:
+
+				p_a->b + p_a->c = p_b->a + p_c->a
+
+					!!!!!!
+
+					This is the Global Balance Condition, the necessary and sufficient condition for a monte carlo algorithm
+
+					its is just the set of transition probabilities from one site to   another. 
+
+	Detailed Balance Condition (as opposed to Global) says the same thing but more simply
+
+		p_a->b = p_b->a
+		p_a->c = p_c->a
+
+	each of the four moves (up, down, left, right)
+
+		have a probability 1/4 of happening
+
+	p_a->b = min(1, pr(b)/pr(a)) -- a being the initial state and b being the state it jumps to
+
+
+		pebble_basic.py
