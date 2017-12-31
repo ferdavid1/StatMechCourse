@@ -1,0 +1,9 @@
+Convergence of Markov Chain Monte Carlo algos
+
+	characterized by time scale 
+
+		e^(-t/T)
+
+	converges to a steady state
+
+	
